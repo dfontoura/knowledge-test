@@ -6,7 +6,7 @@ module.exports = class PurchaseOrdersRepository {
     async create(purchaseOrders) {
         const sql = `
             INSERT INTO 
-                purchase-orders (product_id, price) 
+                purchase_orders (product_id, price) 
             VALUES 
                 (?,?);
         `;
