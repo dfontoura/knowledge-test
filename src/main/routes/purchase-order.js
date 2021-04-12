@@ -3,6 +3,6 @@ const makeFindAllPurchaseOrdersController = require('../factories/controllers/pu
 const makeCreatePurchaseOrderController = require('../factories/controllers/purchase-orders/create-purchase-orders');
 
 module.exports = (router) => {
-    router.get('/purchase-orders', adaptRoute(makeFindAllPurchaseOrdersController()));
-    router.post('/purchase-orders', adaptRoute(makeCreatePurchaseOrderController()));
+    router.get('/orders', adaptRoute(makeFindAllPurchaseOrdersController()));
+    router.post('/orders', adaptRoute(makeCreatePurchaseOrderController()));
 };

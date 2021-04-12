@@ -2,7 +2,7 @@
 
 > ## Caso de sucesso
 
-1. ✅ Recebe uma requisição do tipo **GET** na rota **/api/purchase-orders**
+1. ✅ Recebe uma requisição do tipo **GET** na rota **/api/orders**
 2. ✅ Retorna **200**, com os dados das ordens de compra encontrados
 
 > ## Exceções
