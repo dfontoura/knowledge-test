@@ -25,4 +25,12 @@ describe('PurchaseOrdersRepository', () => {
             expect(insertedRows).toBe(1);
         });
     });
+
+    describe('findAll()', () => {
+        it('should return purchase orders list', async () => {
+            const sut = makeSut();
+            const purchaseOrders = await sut.findAll();
+            expect(purchaseOrders).toEqual([]);
+        });
+    });
 });
