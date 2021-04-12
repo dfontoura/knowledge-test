@@ -35,4 +35,17 @@ module.exports = class PurchaseOrdersRepository {
 
         return db.persistMany(sql, purchaseOrders);
     }
+
+    async delete(id) {
+        const sql = `
+            UPDATE 
+                purchase_orders
+            SET 
+                deletion_flag = 't' 
+            WHERE 
+                id = ?;
+        `;
+
+        return db.update(sql, id);
+    }
 };
