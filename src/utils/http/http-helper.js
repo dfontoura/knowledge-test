@@ -26,6 +26,11 @@ const created = (data) => ({
     body: data
 });
 
+const deleted = (data) => ({
+    statusCode: 202,
+    body: data
+});
+
 const noContent = () => ({
     statusCode: 204,
     body: null
@@ -33,6 +38,7 @@ const noContent = () => ({
 
 module.exports = {
     created,
+    deleted,
     badRequest,
     serverError,
     success,
