@@ -5,7 +5,7 @@
 1. ✅ Recebe uma requisição do tipo **POST** na rota **/api/orders**
 2. ✅ Valida dados obrigatórios **product_id** e **price**
 3. ✅ **Cria** um pedido de compra com os dados fornecidos
-4. ✅ Retorna **204**, sem dados
+4. ✅ Retorna **201**, com dados do(s) pedido(s) de compra criados(s)
 
 > ## Exceções
 
