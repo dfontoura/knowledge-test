@@ -54,10 +54,8 @@ module.exports = class SQLiteAdapter {
 
     async update(sql, parameter) {
         await this.reconectIfIsNotConnected();
-        const updateResult = await this.client.run(sql, parameter);
-        const result = { affectedRows: updateResult.changes };
-
-        return result;
+        const result = await this.client.run(sql, parameter);
+        return result.affectedRows;
     }
 
     static getInstance(options) {
