@@ -11,4 +11,9 @@ module.exports = class PurchaseOrderRepositorySpy {
         this.params = params;
         return this.result;
     }
+
+    async delete(params) {
+        this.params = params;
+        return this.result;
+    }
 };

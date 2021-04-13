@@ -52,6 +52,12 @@ module.exports = class SQLiteAdapter {
         return batchData.length;
     }
 
+    async update(sql, parameter) {
+        await this.reconectIfIsNotConnected();
+        const result = await this.client.run(sql, parameter);
+        return result.affectedRows;
+    }
+
     static getInstance(options) {
         return this._instance || (this._instance = new this(options));
     }
